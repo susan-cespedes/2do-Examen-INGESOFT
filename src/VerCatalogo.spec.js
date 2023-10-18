@@ -35,3 +35,11 @@ describe("Ver imagen de ejercicio", () => {
       });
   }
 );
+
+describe("Ver resumen del ejercicio", () => {
+    it("Devuelve resumen del ejercicio de numero Primos", () => {
+      let ejercicio= new Ejercicio("Numeros Primos","Numeros");
+      expect(ejercicio.getResumen()).toEqual("Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.");
+    });
+  }
+);
