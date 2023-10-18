@@ -1,6 +1,9 @@
 class Ejercicio{
+    constructor(titulo){
+        this.titulo=titulo;
+    }
     getTitulo(){
-        return "Numeros Primos";
+        return this.titulo;
     }
 }
 export default Ejercicio;
