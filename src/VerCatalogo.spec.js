@@ -21,6 +21,13 @@ describe("Ver categoria de ejercicio", () => {
         let ejercicio= new Ejercicio("Tic-Tac-Toe","Juegos");
         expect(ejercicio.getCategoria()).toEqual("Juegos");
       });
-  
+  }
+);
+
+describe("Ver imagen de ejercicio", () => {
+    it("Devuelve imagen predeterminada de un ejercicio", () => {
+      let ejercicio= new Ejercicio("Numeros Primos","Numeros");
+      expect(ejercicio.getImagen()).toEqual("imagenpredeterminada.jpg");
+    });
   }
 );

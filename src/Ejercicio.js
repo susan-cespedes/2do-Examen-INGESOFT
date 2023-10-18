@@ -9,5 +9,8 @@ class Ejercicio{
     getCategoria(){
         return this.categoria;
     }
+    getImagen(){
+        return "imagenpredeterminada.jpg";
+    }
 }
 export default Ejercicio;
