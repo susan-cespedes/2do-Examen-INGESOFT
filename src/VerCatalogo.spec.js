@@ -47,3 +47,16 @@ describe("Ver resumen del ejercicio", () => {
       });
   }
 );
+describe("Ver ejercicios en el catalogo", () => {
+    it("Devuelve No se tiene ejercicios disponibles si la lista esta vacia", () => {
+      let catalogo= new Catalogo();
+      expect(catalogo.verificarListaVacia()).toEqual("No se tiene ejercicios disponibles");
+    });
+
+  }
+);
+class Catalogo{
+    verificarListaVacia(){
+        return "No se tiene ejercicios disponibles";
+    }
+};
