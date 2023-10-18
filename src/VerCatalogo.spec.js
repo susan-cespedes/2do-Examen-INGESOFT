@@ -52,11 +52,20 @@ describe("Ver ejercicios en el catalogo", () => {
       let catalogo= new Catalogo();
       expect(catalogo.verificarListaVacia()).toEqual("No se tiene ejercicios disponibles");
     });
-
+    it("Devuelve La lista tiene ejercicio si la lista no esta vacia", () => {
+        let catalogo= new Catalogo([new Ejercicio()]);
+        expect(catalogo.verificarListaVacia()).toEqual("La lista tiene ejercicios");
+      });
+  
   }
 );
 class Catalogo{
+    constructor(lista=[]){
+        this.lista=lista;
+    }
     verificarListaVacia(){
-        return "No se tiene ejercicios disponibles";
+        let mensaje="No se tiene ejercicios disponibles"
+        if(this.lista.length!=0) mensaje="La lista tiene ejercicios";
+        return mensaje;
     }
 };
