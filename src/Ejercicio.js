@@ -1,8 +1,9 @@
 class Ejercicio{
-    constructor(titulo,categoria,imagen="imagenpredeterminada.jpg"){
+    constructor(titulo,categoria,imagen="imagenpredeterminada.jpg",resumen){
         this.titulo=titulo;
         this.categoria=categoria;
         this.imagen=imagen;
+        this.resumen=resumen;
     }
     getTitulo(){
         return this.titulo;
@@ -14,7 +15,7 @@ class Ejercicio{
         return this.imagen;
     }
     getResumen(){
-        return "Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.";
+        return this.resumen;
     }
 }
 export default Ejercicio;
