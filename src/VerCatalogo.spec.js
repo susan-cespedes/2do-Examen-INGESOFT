@@ -13,10 +13,14 @@ describe("Ver titulo de ejercicio", () => {
 );
 
 describe("Ver categoria de ejercicio", () => {
-    it("Devuelve categoria de un ejercicio", () => {
+    it("Devuelve categoria de un ejercicio de categoria numeros", () => {
       let ejercicio= new Ejercicio("Numeros Primos","Numeros");
       expect(ejercicio.getCategoria()).toEqual("Numeros");
     });
-
+    it("Devuelve categoria de un ejercicio de categoria Juegos", () => {
+        let ejercicio= new Ejercicio("Tic-Tac-Toe","Juegos");
+        expect(ejercicio.getCategoria()).toEqual("Juegos");
+      });
+  
   }
 );

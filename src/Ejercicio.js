@@ -1,12 +1,13 @@
 class Ejercicio{
-    constructor(titulo){
+    constructor(titulo,categoria){
         this.titulo=titulo;
+        this.categoria=categoria;
     }
     getTitulo(){
         return this.titulo;
     }
     getCategoria(){
-        return "Numeros";
+        return this.categoria;
     }
 }
 export default Ejercicio;
