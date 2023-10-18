@@ -1,5 +1,5 @@
 import Ejercicio from "./Ejercicio.js";
-
+import Catalogo from "./Catalogo.js";
 describe("Ver titulo de ejercicio", () => {
     it("Devuelve título de un ejercicio", () => {
       let ejercicio= new Ejercicio("Numeros Primos");
@@ -56,16 +56,9 @@ describe("Ver ejercicios en el catalogo", () => {
         let catalogo= new Catalogo([new Ejercicio()]);
         expect(catalogo.verificarListaVacia()).toEqual("La lista tiene ejercicios");
       });
-  
+      it("Devuelve lista vacia al listar 0 ejercicios", () => {
+        let catalogo= new Catalogo([new Ejercicio()]);
+        expect(catalogo.getNPrimerosEjercicios(0)).toEqual([]);
+      });
   }
 );
-class Catalogo{
-    constructor(lista=[]){
-        this.lista=lista;
-    }
-    verificarListaVacia(){
-        let mensaje="No se tiene ejercicios disponibles"
-        if(this.lista.length!=0) mensaje="La lista tiene ejercicios";
-        return mensaje;
-    }
-};
