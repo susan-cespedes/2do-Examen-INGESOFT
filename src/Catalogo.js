@@ -8,7 +8,7 @@ class Catalogo{
         return mensaje;
     }
     getNPrimerosEjercicios(cantidad){
-        return [];
+        return this.lista.slice(0,cantidad);
     }
 };
 export default Catalogo;

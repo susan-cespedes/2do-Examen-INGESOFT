@@ -60,5 +60,14 @@ describe("Ver ejercicios en el catalogo", () => {
         let catalogo= new Catalogo([new Ejercicio()]);
         expect(catalogo.getNPrimerosEjercicios(0)).toEqual([]);
       });
+      it("Devuelve el primer ejercicio", () => {
+        let ejercicio=new Ejercicio(
+            "Numeros Primos","Numeros",undefined,
+            "Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación."
+        );
+        let catalogo= new Catalogo([ejercicio]);
+        expect(catalogo.getNPrimerosEjercicios(1)).toEqual([{"categoria": "Numeros", "imagen": "imagenpredeterminada.jpg", "resumen": "Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.", "titulo": "Numeros Primos"}]);
+      });
+ 
   }
 );
