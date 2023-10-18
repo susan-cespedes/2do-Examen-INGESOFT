@@ -11,3 +11,12 @@ describe("Ver titulo de ejercicio", () => {
       });
   }
 );
+
+describe("Ver categoria de ejercicio", () => {
+    it("Devuelve categoria de un ejercicio", () => {
+      let ejercicio= new Ejercicio("Numeros Primos","Numeros");
+      expect(ejercicio.getCategoria()).toEqual("Numeros");
+    });
+
+  }
+);

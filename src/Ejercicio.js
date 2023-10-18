@@ -5,5 +5,8 @@ class Ejercicio{
     getTitulo(){
         return this.titulo;
     }
+    getCategoria(){
+        return "Numeros";
+    }
 }
 export default Ejercicio;
