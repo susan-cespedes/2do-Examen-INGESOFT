@@ -29,5 +29,9 @@ describe("Ver imagen de ejercicio", () => {
       let ejercicio= new Ejercicio("Numeros Primos","Numeros");
       expect(ejercicio.getImagen()).toEqual("imagenpredeterminada.jpg");
     });
+    it("Devuelve imagen de un ejercicio", () => {
+        let ejercicio= new Ejercicio("Numeros Romanos","Numeros","imgromanos.jpg");
+        expect(ejercicio.getImagen()).toEqual("imgromanos.jpg");
+      });
   }
 );

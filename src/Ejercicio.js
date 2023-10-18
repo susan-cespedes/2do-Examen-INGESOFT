@@ -1,7 +1,8 @@
 class Ejercicio{
-    constructor(titulo,categoria){
+    constructor(titulo,categoria,imagen="imagenpredeterminada.jpg"){
         this.titulo=titulo;
         this.categoria=categoria;
+        this.imagen=imagen;
     }
     getTitulo(){
         return this.titulo;
@@ -10,7 +11,7 @@ class Ejercicio{
         return this.categoria;
     }
     getImagen(){
-        return "imagenpredeterminada.jpg";
+        return this.imagen;
     }
 }
 export default Ejercicio;
