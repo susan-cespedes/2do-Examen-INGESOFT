@@ -68,6 +68,30 @@ describe("Ver ejercicios en el catalogo", () => {
         let catalogo= new Catalogo([ejercicio]);
         expect(catalogo.getNPrimerosEjercicios(1)).toEqual([{"categoria": "Numeros", "imagen": "imagenpredeterminada.jpg", "resumen": "Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.", "titulo": "Numeros Primos"}]);
       });
+      it("Devuelve los 2 primeros ejercicios", () => {
+        let catalogo= new Catalogo([
+            new Ejercicio(
+                "Numeros Primos","Numeros",undefined,
+                "Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación."
+            ),
+            new Ejercicio(
+                "Numeros Romanos","Numeros",
+                "Los romanos fueron ingeniosos conquistadores de Europa, inventaron cosas como el concreto y las carreteras rectas, pero nunca descubrieron el número cero. A pesar de ello, crearon un sistema numérico con letras que todavía se usa hoy en día, como I, V, X, L, C, D, M. Por ejemplo, la BBC usa números romanos en sus programas",
+                "imgromanos.jpg"
+             )
+        ]);
+        expect(catalogo.getNPrimerosEjercicios(2)).toEqual([
+            {   "categoria": "Numeros",
+                "imagen": "imagenpredeterminada.jpg",
+                 "resumen": "Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.", "titulo": "Numeros Primos"},
+            {
+                "categoria": "Numeros",
+                "imagen": "Los romanos fueron ingeniosos conquistadores de Europa, inventaron cosas como el concreto y las carreteras rectas, pero nunca descubrieron el número cero. A pesar de ello, crearon un sistema numérico con letras que todavía se usa hoy en día, como I, V, X, L, C, D, M. Por ejemplo, la BBC usa números romanos en sus programas",
+                "resumen": "imgromanos.jpg",
+                "titulo": "Numeros Romanos",
+            }
+        ]);
+      });
  
   }
 );
