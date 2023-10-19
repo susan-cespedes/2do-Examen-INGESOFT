@@ -1,6 +1,6 @@
-import Catalogo from "./Catalogo.js";
-import ejercicios from "./dataCatalogo.js";
-import Ejercicio from "./Ejercicio.js";
+import { Catalogo } from "./Catalogo.js";
+import {ejercicios} from "./dataCatalogo.js";
+import {Ejercicio} from "./Ejercicio.js";
 describe("Ver titulo de ejercicio", () => {
     it("Devuelve título de un ejercicio", () => {
       let ejercicio= new Ejercicio("Numeros Primos");
@@ -28,11 +28,11 @@ describe("Ver categoria de ejercicio", () => {
 describe("Ver imagen de ejercicio", () => {
     it("Devuelve imagen predeterminada de un ejercicio", () => {
       let ejercicio= new Ejercicio("Numeros Primos","Numeros");
-      expect(ejercicio.getImagen()).toEqual("imagenpredeterminada.jpg");
+      expect(ejercicio.getImagen()).toEqual("predeterminado.png");
     });
     it("Devuelve imagen de un ejercicio", () => {
-        let ejercicio= new Ejercicio("Numeros Romanos","Numeros","imgromanos.jpg");
-        expect(ejercicio.getImagen()).toEqual("imgromanos.jpg");
+        let ejercicio= new Ejercicio("Numeros Romanos","Numeros","imgromanos.png");
+        expect(ejercicio.getImagen()).toEqual("imgromanos.png");
       });
   }
 );
@@ -43,7 +43,7 @@ describe("Ver resumen del ejercicio", () => {
       expect(ejercicio.getResumen()).toEqual("Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.");
     });
     it("Devuelve resumen del ejercicio de numeros Romanos", () => {
-        let ejercicio= new Ejercicio("Numeros Primos","Numeros","imgromanos.jpg", "Los romanos fueron ingeniosos conquistadores de Europa, inventaron cosas como el concreto y las carreteras rectas, pero nunca descubrieron el número cero. A pesar de ello, crearon un sistema numérico con letras que todavía se usa hoy en día, como I, V, X, L, C, D, M. Por ejemplo, la BBC usa números romanos en sus programas");
+        let ejercicio= new Ejercicio("Numeros Primos","Numeros","imgromanos.png", "Los romanos fueron ingeniosos conquistadores de Europa, inventaron cosas como el concreto y las carreteras rectas, pero nunca descubrieron el número cero. A pesar de ello, crearon un sistema numérico con letras que todavía se usa hoy en día, como I, V, X, L, C, D, M. Por ejemplo, la BBC usa números romanos en sus programas");
         expect(ejercicio.getResumen()).toEqual("Los romanos fueron ingeniosos conquistadores de Europa, inventaron cosas como el concreto y las carreteras rectas, pero nunca descubrieron el número cero. A pesar de ello, crearon un sistema numérico con letras que todavía se usa hoy en día, como I, V, X, L, C, D, M. Por ejemplo, la BBC usa números romanos en sus programas");
       });
   }
@@ -63,20 +63,20 @@ describe("Ver ejercicios en el catalogo", () => {
       });
       it("Devuelve el primer ejercicio", () => {
         let catalogo= new Catalogo(ejercicios);
-        expect(catalogo.getNPrimerosEjercicios(1)).toEqual([{"categoria": "Numeros", "imagen": "imagenpredeterminada.jpg", "resumen": "Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.", "titulo": "Numeros Primos"}]);
+        expect(catalogo.getNPrimerosEjercicios(1)).toEqual([{"categoria": "Numeros", "imagen": "predeterminado.png", "resumen": "Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.", "titulo": "Numeros Primos"}]);
       });
       it("Devuelve los 2 primeros ejercicios", () => {
         let catalogo= new Catalogo(ejercicios);
         expect(catalogo.getNPrimerosEjercicios(2)).toEqual([
             {
                  "categoria": "Numeros",
-                 "imagen": "imagenpredeterminada.jpg",
+                 "imagen": "predeterminado.png",
                  "resumen": "Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.",
                  "titulo": "Numeros Primos",
              },
             {
                  "categoria": "Numeros",
-                 "imagen": "imgromanos.jpg",
+                 "imagen": "imgromanos.png",
                  "resumen": "Los romanos fueron ingeniosos conquistadores de Europa, inventaron cosas como el concreto y las carreteras rectas, pero nunca descubrieron el número cero. A pesar de ello, crearon un sistema numérico con letras que todavía se usa hoy en día, como I, V, X, L, C, D, M. Por ejemplo, la BBC usa números romanos en sus programas",
                  "titulo": "Numeros Romanos",
             }

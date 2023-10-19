@@ -1,5 +1,5 @@
 class Ejercicio{
-    constructor(titulo,categoria,imagen="imagenpredeterminada.jpg",resumen){
+    constructor(titulo,categoria,imagen="predeterminado.png",resumen){
         this.titulo=titulo;
         this.categoria=categoria;
         this.imagen=imagen;
@@ -18,4 +18,4 @@ class Ejercicio{
         return this.resumen;
     }
 }
-export default Ejercicio;
+export  {Ejercicio};

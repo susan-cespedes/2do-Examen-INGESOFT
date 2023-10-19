@@ -1,0 +1,136 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+#cabecera{
+    background-color: #E9C891;
+    height: 250px;
+    color: #B04221;
+    display: flex;
+
+}
+h1{
+    color: #8b8635;
+    font-size: 50px;
+    font-weight: bold;
+    font-family:'Lobster',cursive;
+}
+h2{
+    color: #B04221;
+    font-size: 30px;
+    font-weight: bold;
+    font-family:'Lobster',cursive;
+}
+#cabeceraimg{
+    margin: 2%;
+    flex: 20%;
+}
+#cabeceratitulo{
+    margin: 3%;
+    flex: 80%;
+}
+#cuerpo{
+    display: flex;
+}
+#menulateral{
+    flex: 30%;
+}
+#contenidocatalogo{
+    flex: 70% ;
+}
+#menulateral ul li a{
+    color: #B04221;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;  
+    text-transform: uppercase;
+    border-bottom: 1px dashed #B04221;
+    
+    
+}
+#menulateral ul li a:hover{
+    color: #8b8635;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none;  
+    text-transform: uppercase;
+    border-bottom: 1px dashed #B04221;
+    
+    
+}
+
+#menulateral{
+    text-align: center;
+    padding-bottom: 20px;
+    
+}
+#contenidocatalogo{
+    border-left: 1px solid #8b8635;
+    
+}
+#ubicacion
+{
+    font-family: 'lobster',cursive;
+    padding: 15px;
+}
+#ubicacion span a{
+    font-weight: bold;
+    color: #247bb5;
+    text-decoration: none;
+}
+#ubicacion span a:hover{
+    font-weight: bold;
+    color:#B04221;
+}
+#ubicacion span{
+    font-weight: bold;
+    color:#B04221;
+}
+
+#titulocatalogo{
+    color: #8b8635;
+    font-family: verdana;
+    font-weight: bold;
+    text-align: center;
+    text-transform:uppercase;
+    padding: 10px;
+    background-color: #E9C891;
+    
+}
+#marcoimagen{
+    padding: 5px;
+    background-color:#00A99D;
+    height: 100px;
+    width: 150px;
+    border-radius: 8px;
+
+}
+#imgdetallecatalog{
+    padding: 15px;
+}
+#detallecatalogo{
+    display: flex;
+    flex-wrap: wrap;
+}
+#imgdetallecatalog{
+
+    flex: 20%;
+}
+#contenidodetallecatalogo{
+    
+    padding-top: 15px;
+    flex: 70%;
+}
+#contenidodetallecatalogo p{
+    padding-top: 10px;
+}
+#imghome{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+footer{
+  text-align: center;
+  padding: 3px;
+  background-color: #E9C891;
+  color: white;
+}

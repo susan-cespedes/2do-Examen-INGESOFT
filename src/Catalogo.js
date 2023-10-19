@@ -11,4 +11,4 @@ class Catalogo{
         return this.lista.slice(0,cantidad);
     }
 };
-export default Catalogo;
+export {Catalogo};
