@@ -77,4 +77,5 @@ const ejercicios=[
     )
     
 ];
+// ejercicios=[];
 export {ejercicios};
