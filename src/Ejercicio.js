@@ -26,12 +26,7 @@ class Ejercicio{
       return this.categoria !=undefined;
     }
     validarResumen(){
-        if (this.resumen != undefined){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return this.resumen !=undefined;
 
     }
 }
