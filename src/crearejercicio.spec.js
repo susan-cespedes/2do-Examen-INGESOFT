@@ -29,6 +29,18 @@ describe("Crear Ejercicios con categoría", () => {
 }
 );
 
+describe("Crear Ejercicios con resumen", () => {
+
+  it("Validar que el campo resumen no esté vacío", () => {
+    let ejercicio= new Ejercicio()
+    expect(ejercicio.validarResumen()).toEqual(false);
+  });
+
+  
+ 
+}
+);
+
 
 
 

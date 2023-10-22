@@ -25,5 +25,8 @@ class Ejercicio{
     validarCategoria(){
       return this.categoria !=undefined;
     }
+    validarResumen(){
+        return false;
+    }
 }
 export  {Ejercicio};
