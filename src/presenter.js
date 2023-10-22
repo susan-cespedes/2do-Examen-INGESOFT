@@ -12,7 +12,8 @@ function llenarEjercicios(){
       ejerciciosHTML+=`
       <div id="imgdetallecatalog">
         <div id="marcoimagen">
-          <img src="${require("./img/predeterminado.png")}" width="150px" height="auto">
+        
+          <img src="img/${ejercicio.getImagen()}" width="150px" height="auto">
         </div>
       </div>
       <div id="contenidodetallecatalogo">
