@@ -18,8 +18,13 @@ class Ejercicio{
         return this.resumen;
     }
     validarTitulo(){
+        if (this.titulo !=undefined){
+            return true;
+        }
+        else{
+            return false;
+        }
         
-        return false
     }
 }
 export  {Ejercicio};
