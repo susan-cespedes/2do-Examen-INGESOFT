@@ -35,6 +35,10 @@ describe("Crear Ejercicios con resumen", () => {
     let ejercicio= new Ejercicio()
     expect(ejercicio.validarResumen()).toEqual(false);
   });
+  it("Validar que el campo resumen tenga cotenido", () => {
+    let ejercicio= new Ejercicio("nombre","categoria","","resumen")
+    expect(ejercicio.validarResumen()).toEqual(true);
+  });
 
   
  
