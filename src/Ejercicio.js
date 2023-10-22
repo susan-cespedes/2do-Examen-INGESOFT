@@ -23,12 +23,7 @@ class Ejercicio{
         
     }
     validarCategoria(){
-        if(this.categoria !=undefined){
-            return true;
-        }
-        else{
-            return false;
-        }
+      return this.categoria !=undefined;
     }
 }
 export  {Ejercicio};
