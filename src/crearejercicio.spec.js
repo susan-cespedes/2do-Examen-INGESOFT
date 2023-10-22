@@ -20,6 +20,10 @@ describe("Crear Ejercicios con categoría", () => {
     let ejercicio= new Ejercicio()
     expect(ejercicio.validarCategoria()).toEqual(false);
   });
+  it("Validar que el campo categoria tenga contenido", () => {
+    let ejercicio= new Ejercicio("nombre","categoria")
+    expect(ejercicio.validarCategoria()).toEqual(true);
+  });
   
  
 }
