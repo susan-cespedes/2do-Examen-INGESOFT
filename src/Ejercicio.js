@@ -22,5 +22,8 @@ class Ejercicio{
         return this.titulo != undefined;
         
     }
+    validarCategoria(){
+        return false;
+    }
 }
 export  {Ejercicio};

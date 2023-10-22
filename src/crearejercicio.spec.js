@@ -1,6 +1,7 @@
 import {Ejercicio} from "./Ejercicio"
 
-describe("Crear Ejercicios", () => {
+describe("Crear Ejercicios con título", () => {
+
     it("Validar que el título no esté vacío", () => {
       let ejercicio= new Ejercicio()
       expect(ejercicio.validarTitulo()).toEqual(false);
@@ -11,6 +12,17 @@ describe("Crear Ejercicios", () => {
     });
    
   }
+);
+
+describe("Crear Ejercicios con categoría", () => {
+
+  it("Validar que la categoria no esté vacío", () => {
+    let ejercicio= new Ejercicio()
+    expect(ejercicio.validarCategoria()).toEqual(false);
+  });
+  
+ 
+}
 );
 
 
