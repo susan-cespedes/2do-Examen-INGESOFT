@@ -10,5 +10,11 @@ class Catalogo{
     getNPrimerosEjercicios(cantidad){
         return this.lista.slice(0,cantidad);
     }
+    getEjercicios(){
+        return this.lista;
+    }
+    agregarEjercicio(ejercicio){
+        this.lista.push(ejercicio);
+    }
 };
 export {Catalogo};
