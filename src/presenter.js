@@ -1,18 +1,19 @@
 import { Catalogo } from "./Catalogo.js";
 import { ejercicios } from "./dataCatalogo.js";
-const catalogo= new Catalogo(ejercicios);
+export const catalogo= new Catalogo(ejercicios);
 const detalleCatalogo=document.getElementById("detallecatalogo");
+
 function llenarEjercicios(){
   let ejerciciosHTML=``;
-  if(catalogo.verificarListaVacia()=="No se tiene ejercicios disponibles"){
+  console.log(catalogo)
+  if(catalogo.verificarListaVacia()=="No se tiene ejercicios disponibles" || detalleCatalogo==null){
     detalleCatalogo.innerHTML+=`<p>${catalogo.verificarListaVacia()}</p>`;
     return;
   }
-  catalogo.getNPrimerosEjercicios(10).forEach(ejercicio => {
+  catalogo.getEjercicios().forEach(ejercicio => {
       ejerciciosHTML+=`
       <div id="imgdetallecatalog">
         <div id="marcoimagen">
-        
           <img src="img/${ejercicio.getImagen()}" width="150px" height="auto">
         </div>
       </div>
@@ -23,6 +24,7 @@ function llenarEjercicios(){
   });
   detalleCatalogo.innerHTML+=ejerciciosHTML;
 }
+
 llenarEjercicios();
 
 
