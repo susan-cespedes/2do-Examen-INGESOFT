@@ -63,6 +63,10 @@ describe("Validar los atributos de un ejercicio", () => {
     let ejercicio=new Ejercicio();
     expect(ejercicio.validarAtributos()).toEqual(false);
   });
+  it("Validar que tenga todos los campos ejercicio con titulo, categoria y resumen", () => {       
+    let ejercicio=new Ejercicio("titulo1","juego",undefined,"resumen1");
+    expect(ejercicio.validarAtributos()).toEqual(true);
+  });
 }
 );
 
