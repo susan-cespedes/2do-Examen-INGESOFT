@@ -58,6 +58,14 @@ describe("Crear Ejercicio en el catálogo", () => {
 }
 );
 
+describe("Validar los atributos de un ejercicio", () => {
+  it("Validar que tenga todos los campos ejercicio sin campos", () => {       
+    let ejercicio=new Ejercicio();
+    expect(ejercicio.validarAtributos()).toEqual(false);
+  });
+}
+);
+
 
 
 

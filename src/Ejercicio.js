@@ -26,5 +26,8 @@ class Ejercicio{
     validarResumen(){
         return this.resumen !="";
     }
+    validarAtributos(){
+        return false;
+    }
 }
 export  {Ejercicio};
