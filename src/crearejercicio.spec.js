@@ -57,15 +57,17 @@ describe("Crear Ejercicio en el catálogo", () => {
   });
 }
 );
-
+function validarAtributos(titulo,categoria,imagen,resumen){
+  let ejercicio=new Ejercicio(titulo,categoria,imagen,resumen);
+  return ejercicio.validarAtributos();
+}
 describe("Validar los atributos de un ejercicio", () => {
   it("Validar que tenga todos los campos ejercicio sin campos", () => {       
     let ejercicio=new Ejercicio();
-    expect(ejercicio.validarAtributos()).toEqual(false);
+    expect(validarAtributos()).toEqual(false);
   });
   it("Validar que tenga todos los campos ejercicio con titulo, categoria y resumen", () => {       
-    let ejercicio=new Ejercicio("titulo1","juego",undefined,"resumen1");
-    expect(ejercicio.validarAtributos()).toEqual(true);
+    expect(validarAtributos("titulo1","juego",undefined,"resumen1")).toEqual(true);
   });
 }
 );

@@ -40,7 +40,7 @@ btnregistrar.addEventListener("click", (env)=>{
         ejerciciosHTML+=`
         <div id="imgdetallecatalog">
           <div id="marcoimagen">
-            <img src="img/${ejercicio.getImagen()}" width="150px" height="auto">
+            <img src="${require("./img/predeterminado.png")}" width="150px" height="auto">
           </div>
         </div>
         <div id="contenidodetallecatalogo">
@@ -61,7 +61,7 @@ const txtDetalle=document.getElementById("txtDetalle");
       
     let ejercicio=new Ejercicio(nombre,categoria,undefined,detalle);
    
-    if(ejercicio.validarTitulo()==true && ejercicio.validarCategoria()==true && ejercicio.validarResumen() ==true){
+    if(ejercicio.validarAtributos()==true){
      alert("Datos subidos correctamente")
      catalogo.agregarEjercicio(ejercicio);
      llenarEjercicios();
