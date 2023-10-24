@@ -1,3 +1,4 @@
+import { Ejercicio } from "./Ejercicio";
 class Catalogo{
     constructor(lista=[]){
         this.lista=lista;
@@ -16,11 +17,15 @@ class Catalogo{
     agregarEjercicio(ejercicio){
         this.lista.push(ejercicio);
     }
-    buscarPorNombre(nombreejercicio){
+    buscarPorNombre(tituloEjercicio){
         let coincidencias=[];
-        if(nombreejercicio != "Numeros Random")
+        if(tituloEjercicio != "Numeros Random")
         {
-         coincidencias.push({"categoria": "", "imagen": "predeterminado.png", "resumen": "", "titulo": "Numeros Romanos"})   ;
+         this.lista.forEach((ejercicio) => {
+             if(tituloEjercicio==ejercicio.getTitulo()){
+                 coincidencias.push(ejercicio);
+             }
+           });
         }
         return coincidencias;
     }
