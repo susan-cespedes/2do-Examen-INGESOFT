@@ -12,7 +12,7 @@ class Ejercicio{
         return this.categoria;
     }
     getImagen(){
-        return "1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph";
+        return this.imagen;
     }
     getResumen(){
         return this.resumen;
