@@ -1,6 +1,7 @@
 import { Catalogo } from "./Catalogo.js";
 import { Ejercicio } from "./Ejercicio.js";
 import { ejercicios } from "./dataCatalogo.js";
+import { URLIMAGENES } from "./constantes.js";
 const detalleCatalogo = document.getElementById("detallecatalogo");
 const catalogo = new Catalogo(ejercicios);
 const txtNombre = document.getElementById("txtNombre");
@@ -11,10 +12,11 @@ function crearHTMLejercicios(listaEjercicios, contenedor) {
   contenedor.innerHTML = "";
   let ejerciciosHTML = ``;
   listaEjercicios.forEach((ejercicio) => {
+    let imagen=URLIMAGENES+ejercicio.getImagen();
     ejerciciosHTML += `
         <div id="imgdetallecatalog">
           <div id="marcoimagen">
-            <img src="${require("./img/predeterminado.png")}" width="150px" height="auto">
+            <img src=${imagen} width="150px" height="100px">
           </div>
         </div>
         <div id="contenidodetallecatalogo">
