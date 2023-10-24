@@ -14,6 +14,10 @@ describe("Buscar ejercicio por nombre", () => {
         let catalogo=new Catalogo([new Ejercicio("Numeros Primos"),new Ejercicio("Numeros Romanos")]);
         expect(catalogo.buscarPorNombre("Numeros Primos")).toEqual([{"categoria": "", "imagen": "predeterminado.png", "resumen": "", "titulo": "Numeros Primos"}]);
     });
+    it("Devuelve la lista de coincidencia con el ejercicio titulado numeros random", () => {
+      let catalogo=new Catalogo([new Ejercicio("Numeros Primos"),new Ejercicio("Numeros Romanos"),new Ejercicio("Numeros Random")]);
+      expect(catalogo.buscarPorNombre("Numeros Random")).toEqual([{"categoria": "", "imagen": "predeterminado.png", "resumen": "", "titulo": "Numeros Random"}]);
+  });
   }
 );
 

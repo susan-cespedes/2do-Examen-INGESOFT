@@ -19,14 +19,13 @@ class Catalogo{
     }
     buscarPorNombre(tituloEjercicio){
         let coincidencias=[];
-        if(tituloEjercicio != "Numeros Random")
-        {
+      
          this.lista.forEach((ejercicio) => {
              if(tituloEjercicio==ejercicio.getTitulo()){
                  coincidencias.push(ejercicio);
              }
            });
-        }
+        
         return coincidencias;
     }
 
