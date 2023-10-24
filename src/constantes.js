@@ -1,4 +1,5 @@
 import { Ejercicio } from "./Ejercicio";
+const  IMAGENPREDETERMINADA="1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph";
 const ejerciciosPruebas=[
     new Ejercicio("Numeros Primos","Numeros",undefined,"resumen")
     ,new Ejercicio("Numeros Romanos","Numeros","10PUZY7ai9akJ5VAGzWbPNKGjQXBQ4-f9","resumen2")

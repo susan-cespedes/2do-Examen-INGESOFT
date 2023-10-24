@@ -11,6 +11,9 @@ class Ejercicio{
     getCategoria(){
         return this.categoria;
     }
+    getImagen(){
+        return "1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph";
+    }
     getResumen(){
         return this.resumen;
     }
