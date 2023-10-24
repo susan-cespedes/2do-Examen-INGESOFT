@@ -16,8 +16,14 @@ class Catalogo{
     agregarEjercicio(ejercicio){
         this.lista.push(ejercicio);
     }
-    buscarPorNombre(){
-        return [];
+    buscarPorNombre(nombreejercicio){
+        let coincidencias=[];
+        if(nombreejercicio != "Numeros Random")
+        {
+         coincidencias.push({"categoria": "", "imagen": "predeterminado.png", "resumen": "", "titulo": "Numeros Romanos"})   ;
+        }
+        return coincidencias;
     }
+
 };
 export {Catalogo};
