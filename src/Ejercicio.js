@@ -18,16 +18,13 @@ class Ejercicio{
         return this.resumen;
     }
     validarTitulo(){
-        
         return this.titulo != "";
-        
     }
     validarCategoria(){
       return this.categoria !="";
     }
     validarResumen(){
         return this.resumen !="";
-
     }
 }
 export  {Ejercicio};

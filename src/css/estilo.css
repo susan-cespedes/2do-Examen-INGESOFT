@@ -35,7 +35,7 @@ h2{
 #menulateral{
     flex: 30%;
 }
-#contenidocatalogo{
+#allcontenido{
     flex: 70% ;
 }
 #menulateral ul li a{
@@ -64,7 +64,7 @@ h2{
     padding-bottom: 20px;
     
 }
-#contenidocatalogo{
+#allcontenido{
     border-left: 1px solid #8b8635;
     
 }
@@ -134,6 +134,7 @@ footer{
   background-color: #E9C891;
   color: white;
 }
+
 input[type=text],select, textarea{
     width: 100%;
     padding: 10px 0px;

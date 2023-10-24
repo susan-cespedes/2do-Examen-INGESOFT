@@ -22,25 +22,55 @@
             <div id="menulateral">
                 <div id="imghome"><img src="./src/img/home.png" width="73px"></div>
              <ul>
-                <li><a href="./index.html">Catálogo</a></li>
-                <li><a href="">Crear Ejercicio</a></li>
+                <li><a id="menucatalogo" href="./index.html">Catálogo</a></li>
+                <li><a id="menuacregarejer" href="">Crear Ejercicio</a></li>
                 
              </ul>
             </div>
-            <div id="contenidocatalogo">
-           <div id="ubicacion">Estas aquí:<span><a href="#">Inicio</a></span> /<span> <a href="index.html"></a>Catálogo Ejercicios</span> </div>
+            <div id="allcontenido">
+                <div id="ubicacion">Estas aquí:<span><a href="#">Inicio</a></span> /<span> <a href="index.html"></a>Catálogo Ejercicios</span> </div>
+            <!-- Mostramos el contenido detallado de la lista de catálogos-->
+            
+                
+                <div id="contenidocatalogo">
+                <div id="datoscatalogo">
+               <div id="titulocatalogo">Catálogo de Ejercicios</div>
+            
+               <div id="detallecatalogo">
+               
+    
+               </div>
+                </div>
           
-           <div id="titulocatalogo">Catálogo de Ejercicios</div>
-        
-           <div id="detallecatalogo">
-           
+                </div>
 
-           </div>
+           <!-- Mostramos el formulario de inserción de registro-->
+           <div id="formularioejercicio">
+            <div id="titulocatalogo">FORMULARIO PARA CREAR EJERCICIO</div>
+                 <div id="formulariocategoria">
+    <form>
+        <label>Nombre:</label>
+        <input type="text" placeholder="Nombre de ejercicio" id="txtNombre">
+        <label >Categoría:</label>
+        <select name="categoria" id="selecCategoria">
+            
+            <option value="Números">Número</option>
+            <option value="Geometría">Geometría</option>
+            <option value="Cadenas">Cadenas</option>
+            <option value="Juegos">Juegos</option>
+        </select>
+        <label>Detalle:</label>
+        <textarea id="txtDetalle" name="txtDetalle" placeholder="Ingresar el detalle del ejercicio">
 
-           
-      
+        </textarea>
+        <input type="submit" id="crearregistro" value="CREAR">
+
+    </form>
+                  </div>
+            
+
+          </div>
         </div>
-
 
         </div>
 
