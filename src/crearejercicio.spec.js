@@ -53,7 +53,7 @@ describe("Crear Ejercicio en el catálogo", () => {
     let catalogo=new Catalogo([new Ejercicio("Numeros Primos"),new Ejercicio("Numeros Romanos")])
     let ejercicio= new Ejercicio("Ahorcado")
     catalogo.agregarEjercicio(ejercicio);
-    expect(catalogo.getEjercicios()).toEqual([{"categoria": undefined, "imagen": "predeterminado.png", "resumen": undefined, "titulo": "Numeros Primos"}, {"categoria": undefined, "imagen": "predeterminado.png", "resumen": undefined, "titulo": "Numeros Romanos"}, {"categoria": undefined, "imagen": "predeterminado.png", "resumen": undefined, "titulo": "Ahorcado"}]);
+    expect(catalogo.getEjercicios()).toEqual([{"categoria": "", "imagen": "predeterminado.png", "resumen": "", "titulo": "Numeros Primos"}, {"categoria": "", "imagen": "predeterminado.png", "resumen": "", "titulo": "Numeros Romanos"}, {"categoria": "", "imagen": "predeterminado.png", "resumen": "", "titulo": "Ahorcado"}]);
   });
 }
 );

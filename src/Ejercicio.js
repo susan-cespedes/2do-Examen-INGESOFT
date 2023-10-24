@@ -1,5 +1,5 @@
 class Ejercicio{
-    constructor(titulo,categoria,imagen="predeterminado.png",resumen){
+    constructor(titulo="",categoria="",imagen="predeterminado.png",resumen=""){
         this.titulo=titulo;
         this.categoria=categoria;
         this.imagen=imagen;
@@ -19,14 +19,14 @@ class Ejercicio{
     }
     validarTitulo(){
         
-        return this.titulo != undefined;
+        return this.titulo != "";
         
     }
     validarCategoria(){
-      return this.categoria !=undefined;
+      return this.categoria !="";
     }
     validarResumen(){
-        return this.resumen !=undefined;
+        return this.resumen !="";
 
     }
 }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/estilo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster">
+    <title>TDD-Genius</title>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="cabecera">
+<div id="cabeceraimg">
+<img src="./src/img/logo.png" alt="" height="150px">
+</div>
+<div id="cabeceratitulo">
+<h1>TDDGenius</h1>
+<h2>"Crear el futuro del software, una prueba a la vez"</h2>
+</div>
+        </div>
+        <div id="cuerpo">
+            <div id="menulateral">
+                <div id="imghome"><img src="./src/img/home.png" width="73px"></div>
+             <ul>
+                <li><a href="index.html">Catálogo</a></li>
+                <li><a href="crearejercicio.html">Crear Ejercicio</a></li>
+                
+             </ul>
+            </div>
+            <div id="contenidocatalogo">
+           <div id="ubicacion">Estas aquí:<span><a href="index.html">Inicio</a></span> /<span> <a href="#">Catálogo Ejercicios</a></span> /<span> Crear Ejercicio</span> </div>
+           
+          <div id="formularioejercicio">
+            <div id="titulocatalogo">FORMULARIO PARA CREAR EJERCICIO</div>
+   <div id="formulariocategoria">
+    <form>
+        <label>Nombre:</label>
+        <input type="text" placeholder="Nombre de ejercicio" id="txtNombre">
+        <label >Categoría:</label>
+        <select name="categoria" id="selecCategoria">
+            <option value="Números">Número</option>
+            <option value="Geometría">Geometría</option>
+            <option value="Cadenas">Cadenas</option>
+            <option value="Juegos">Juegos</option>
+        </select>
+        <label>Detalle:</label>
+        <textarea name="txtDetalle" placeholder="Ingresar el detalle del ejercicio">
+
+        </textarea>
+        <input type="submit" id="crearregistro" value="CREAR">
+
+    </form>
+   </div>
+            
+
+          </div>
+           
+      
+        </div>
+
+
+        </div>
+
+    </div>
+    <script type="module" src="./src/presentercrearEjer.js"></script> 
+<footer>
+<p>Integrantes:</p>
+</footer>
+
+</body>
+</html>
