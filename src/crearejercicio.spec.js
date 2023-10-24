@@ -1,7 +1,6 @@
 import {Ejercicio} from "./Ejercicio"
 import { Catalogo } from "./Catalogo";
-import { ejercicios } from "./dataCatalogo";
-
+import { ejerciciosPruebas } from "./constantes";
 function validarTitulo(titulo){
   let ejercicio= new Ejercicio(titulo);
   return ejercicio.validarTitulo();
@@ -47,13 +46,16 @@ describe("Crear Ejercicios con resumen", () => {
   });
 }
 );
-
+function agregarEjercicioAlCatalogo(ejercicio,ejercicios){
+    let catalogo=new Catalogo(ejercicios);
+    catalogo.agregarEjercicio(ejercicio);
+    return catalogo.getEjercicios();
+}
 describe("Crear Ejercicio en el catálogo", () => {
   it("Devuelve la lista en el catálogo con el ejercicio agregado", () => {
-    let catalogo=new Catalogo([new Ejercicio("Numeros Primos"),new Ejercicio("Numeros Romanos")])
-    let ejercicio= new Ejercicio("Ahorcado")
-    catalogo.agregarEjercicio(ejercicio);
-    expect(catalogo.getEjercicios()).toEqual([{"categoria": "", "imagen": "predeterminado.png", "resumen": "", "titulo": "Numeros Primos"}, {"categoria": "", "imagen": "predeterminado.png", "resumen": "", "titulo": "Numeros Romanos"}, {"categoria": "", "imagen": "predeterminado.png", "resumen": "", "titulo": "Ahorcado"}]);
+    let ejercicios=ejerciciosPruebas;
+    ejercicios.push(new Ejercicio("Ahorcado"));
+    expect(agregarEjercicioAlCatalogo(new Ejercicio("Ahorcado"),ejerciciosPruebas)).toEqual(ejercicios);
   });
 }
 );

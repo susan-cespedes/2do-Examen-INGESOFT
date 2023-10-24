@@ -1,5 +1,5 @@
 class Ejercicio{
-    constructor(titulo="",categoria="",imagen="predeterminado.png",resumen=""){
+    constructor(titulo="",categoria="",imagen="1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph",resumen=""){
         this.titulo=titulo;
         this.categoria=categoria;
         this.imagen=imagen;

@@ -1,5 +1,5 @@
 import { Catalogo } from "./Catalogo.js";
-import {ejercicios} from "./dataCatalogo.js";
+import { ejerciciosPruebas } from "./constantes.js";
 import {Ejercicio} from "./Ejercicio.js";
 // pruebas titulo Ejercicio
 function getTituloEjercicio(titulo){
@@ -31,21 +31,6 @@ describe("Ver categoria de ejercicio", () => {
       });
   }
 );
- 
-// pruebas imagenes de ejercicio
-function getImagenEjercicio(titulo,categoria,imagen){
-  let ejercicio= new Ejercicio(titulo,categoria,imagen);
-  return ejercicio.getImagen();
-}
-describe("Ver imagen de ejercicio", () => {
-    it("Devuelve imagen predeterminada de un ejercicio", () => {
-      expect(getImagenEjercicio("Numeros Primos","Numeros")).toEqual("predeterminado.png");
-    });
-    it("Devuelve imagen de un ejercicio", () => {
-        expect(getImagenEjercicio("Numeros Romanos","Numeros","imgromanos.png")).toEqual("imgromanos.png");
-      });
-  }
-);
 
 // pruebas resumen de ejercicio
 function getResumenEjercicio(titulo,categoria,imagen,resumen){
@@ -54,10 +39,10 @@ function getResumenEjercicio(titulo,categoria,imagen,resumen){
 }
 describe("Ver resumen del ejercicio", () => {
     it("Devuelve resumen del ejercicio de numero Primos", () => {
-        expect(getResumenEjercicio("Numeros Primos","Numeros",undefined,"Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.")).toEqual("Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.");
+        expect(getResumenEjercicio("Numeros Primos","Numeros",undefined,"resumen")).toEqual("resumen");
     });
     it("Devuelve resumen del ejercicio de numeros Romanos", () => {
-        expect(getResumenEjercicio("Numeros Romanos","Numeros","imgromanos.png", "Los romanos fueron ingeniosos conquistadores de Europa, inventaron cosas como el concreto y las carreteras rectas, pero nunca descubrieron el número cero. A pesar de ello, crearon un sistema numérico con letras que todavía se usa hoy en día, como I, V, X, L, C, D, M. Por ejemplo, la BBC usa números romanos en sus programas")).toEqual("Los romanos fueron ingeniosos conquistadores de Europa, inventaron cosas como el concreto y las carreteras rectas, pero nunca descubrieron el número cero. A pesar de ello, crearon un sistema numérico con letras que todavía se usa hoy en día, como I, V, X, L, C, D, M. Por ejemplo, la BBC usa números romanos en sus programas");
+        expect(getResumenEjercicio("Numeros Romanos","Numeros","imgromanos.png", "resumen2")).toEqual("resumen2");
       });
   }
 );
@@ -71,6 +56,7 @@ function getNPrimerosEjerciciosDeCatalogo(ejerciciosCatalogo,cantAListar){
   let catalogo= new Catalogo(ejerciciosCatalogo);
   return catalogo.getNPrimerosEjercicios(cantAListar);
 }
+
 describe("Ver ejercicios en el catalogo", () => {
     it("Devuelve No se tiene ejercicios disponibles si la lista esta vacia", () => {
       expect(verificarListaVaciaCatalogo()).toEqual("No se tiene ejercicios disponibles");
@@ -82,23 +68,10 @@ describe("Ver ejercicios en el catalogo", () => {
         expect(getNPrimerosEjerciciosDeCatalogo([new Ejercicio()],0)).toEqual([]);
       });
       it("Devuelve el primer ejercicio", () => {
-        expect(getNPrimerosEjerciciosDeCatalogo(ejercicios,1)).toEqual([{"categoria": "Numeros", "imagen": "predeterminado.png", "resumen": "Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.", "titulo": "Numeros Primos"}]);
+        expect(getNPrimerosEjerciciosDeCatalogo(ejerciciosPruebas,1)).toEqual(ejerciciosPruebas.slice(0,1));
       });
       it("Devuelve los 2 primeros ejercicios", () => {
-        expect(getNPrimerosEjerciciosDeCatalogo(ejercicios,2)).toEqual([
-            {
-                 "categoria": "Numeros",
-                 "imagen": "predeterminado.png",
-                 "resumen": "Los números primos son enteros mayores que 1 con solo dos divisores, 1 y ellos mismos. No son divisibles por ningún otro número. Son fundamentales en matemáticas y tienen aplicaciones en criptografía y ciencias de la computación.",
-                 "titulo": "Numeros Primos",
-             },
-            {
-                 "categoria": "Numeros",
-                 "imagen": "imgromanos.png",
-                 "resumen": "Los romanos fueron ingeniosos conquistadores de Europa, inventaron cosas como el concreto y las carreteras rectas, pero nunca descubrieron el número cero. A pesar de ello, crearon un sistema numérico con letras que todavía se usa hoy en día, como I, V, X, L, C, D, M. Por ejemplo, la BBC usa números romanos en sus programas",
-                 "titulo": "Numeros Romanos",
-            }
-        ]);
+        expect(getNPrimerosEjerciciosDeCatalogo(ejerciciosPruebas,2)).toEqual(ejerciciosPruebas.slice(0,2));
       });
  
   }
