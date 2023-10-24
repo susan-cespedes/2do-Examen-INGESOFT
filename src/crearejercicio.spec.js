@@ -63,7 +63,6 @@ function validarAtributos(titulo,categoria,imagen,resumen){
 }
 describe("Validar los atributos de un ejercicio", () => {
   it("Validar que tenga todos los campos ejercicio sin campos", () => {       
-    let ejercicio=new Ejercicio();
     expect(validarAtributos()).toEqual(false);
   });
   it("Validar que tenga todos los campos ejercicio con titulo, categoria y resumen", () => {       

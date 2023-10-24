@@ -16,5 +16,8 @@ class Catalogo{
     agregarEjercicio(ejercicio){
         this.lista.push(ejercicio);
     }
+    buscarPorNombre(){
+        return [];
+    }
 };
 export {Catalogo};
