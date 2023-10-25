@@ -2,12 +2,14 @@ import { Catalogo } from "./Catalogo.js";
 import { Ejercicio } from "./Ejercicio.js";
 import { ejercicios } from "./dataCatalogo.js";
 import { URLIMAGENES,CERO } from "./constantes.js";
+
 const detalleCatalogo = document.getElementById("detallecatalogo");
 const catalogo = new Catalogo(ejercicios);
 const txtNombre = document.getElementById("txtNombre");
 const selecCategoria = document.getElementById("selecCategoria");
 const txtDetalle = document.getElementById("txtDetalle");
 const txtBuscarNombreEjer=document.getElementById("txtbuscar");
+
 
 function crearHTMLejercicios(listaEjercicios, contenedor) {
   contenedor.innerHTML = "";
@@ -67,4 +69,6 @@ function buscarEjercicioPorNombre(){
     else
       crearHTMLejercicios(listaCoincidencias,detalleCatalogo);
 }
+
+
 export { llenarEjercicios, crearjercicio, buscarEjercicioPorNombre};
