@@ -2,6 +2,7 @@ import { Catalogo } from "./Catalogo.js";
 import { Ejercicio } from "./Ejercicio.js";
 import { ejercicios } from "./dataCatalogo.js";
 import { URLIMAGENES,CERO } from "./constantes.js";
+import {crearHTMLejercicios} from "./cargarVistas.js"
 
 const detalleCatalogo = document.getElementById("detallecatalogo");
 const catalogo = new Catalogo(ejercicios);
@@ -10,25 +11,6 @@ const selecCategoria = document.getElementById("selecCategoria");
 const txtDetalle = document.getElementById("txtDetalle");
 const txtBuscarNombreEjer=document.getElementById("txtbuscar");
 
-
-function crearHTMLejercicios(listaEjercicios, contenedor) {
-  contenedor.innerHTML = "";
-  let ejerciciosHTML = ``;
-  listaEjercicios.forEach((ejercicio) => {
-    let imagen=URLIMAGENES+ejercicio.getImagen();
-    ejerciciosHTML += `
-        <div id="imgdetallecatalog">
-          <div id="marcoimagen">
-            <img src=${imagen} width="150px" height="100px">
-          </div>
-        </div>
-        <div id="contenidodetallecatalogo">
-          <h3>${ejercicio.getTitulo()}</h3>
-          <p>${ejercicio.getResumen()}<span>Ver mas</span></p>
-        </div>`;
-  });
-  contenedor.innerHTML += ejerciciosHTML;
-}
 
 function llenarEjercicios() {
   console.log(catalogo);
