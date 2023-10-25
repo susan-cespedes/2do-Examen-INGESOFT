@@ -13,10 +13,7 @@ class Usuario{
             return this.nombre!="";
         }
         validarPassword(){
-            if(this.password != "")
-                return true;
-            else
-                return false;
+            return this.password != "";
         }
   };
 
