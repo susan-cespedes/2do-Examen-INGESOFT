@@ -72,8 +72,29 @@ function crearHTMLejercicios(listaEjercicios, contenedor) {
                 </div>
     `
   }
-  crearfrmBuscar();
+  function frmCrearUsuario(){
+    contenedor.innerHTML+=`
+    <div id="formulariocrearejercicio">
+                    
+    <form>
+        <label>Username:</label>
+        <input type="text" placeholder="Ingrese nombre de usuario" id="txtusername">
+        <label>Password:</label>
+        <input type="text" placeholder="Ingrese contraseña" id="txtpassword">
+        <label>Repetir Password:</label>
+        <input type="text" id="txtreppass"  placeholder="Repita Contraseña">
+       
+        <input type="submit" id="btncrearuser" value="CREAR">
+       
 
+    </form>
+
+
+</div>
+    `
+  }
+  crearfrmBuscar();
   crearfrmListarEjercicios();
   crearfrmejercicio();
+  frmCrearUsuario();
   export {crearHTMLejercicios};
