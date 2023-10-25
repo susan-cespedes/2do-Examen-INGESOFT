@@ -162,7 +162,7 @@ input[type=submit]{
 input[type=submit]:hover{
     background-color: #B04221;
 }
-#formulariocategoria{
+#formulariocategoria,#formulariocrearejercicio{
     width: 70%;
     margin: auto;
     padding: 20px;
