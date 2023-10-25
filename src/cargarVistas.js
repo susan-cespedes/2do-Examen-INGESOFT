@@ -31,5 +31,18 @@ function crearHTMLejercicios(listaEjercicios, contenedor) {
 
 </div>`
   }
+  function crearfrmBuscar(){
+    contenedor.innerHTML+= `<div id="busqueda">
+    <div id="formulariocategoria">
+        <form>
+
+            <input type="search" placeholder="Buscar nombre" id="txtbuscar">
+
+        </form>
+    </div>
+
+</div>`
+  }
+  crearfrmBuscar();
   crearfrmListarEjercicios();
   export {crearHTMLejercicios};
