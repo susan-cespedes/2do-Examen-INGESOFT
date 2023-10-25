@@ -35,10 +35,14 @@ describe("Crear usuarios version basica", () => {
         let usuario=new Usuario("pepe","12pepeqw");
         expect(usuario.validarPassword()).toEqual(true);
     });
-    it("Valida todos los campos del usuario", () => {
+    it("Valida todos los campos del usuario sin campos", () => {
       let usuario=new Usuario();
       expect(usuario.validarCampos()).toEqual(false);
   });
+  it("Valida todos los campos del usuario con campos", () => {
+    let usuario=new Usuario("pepe","123");
+    expect(usuario.validarCampos()).toEqual(true);
+});
   }
 );
    

@@ -16,7 +16,10 @@ class Usuario{
             return this.password!="";
         }
         validarCampos(){
-            return false;
+            if(this.nombre!="" && this.password!="")
+                return true;
+            else
+                return false;
         }
   };
   export{Usuario};
