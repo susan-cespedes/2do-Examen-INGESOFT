@@ -12,6 +12,9 @@ class Usuario{
         validarNombre(){
             return this.nombre!="";
         }
+        validarPassword(){
+            return false;
+        }
   };
 
 export default Usuario;

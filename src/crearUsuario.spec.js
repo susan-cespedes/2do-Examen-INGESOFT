@@ -26,7 +26,11 @@ describe("Crear usuarios version basica", () => {
     it("Valida nombre de usuario ingresado con nombre", () => {
         let usuario=new Usuario("pepe");
         expect(usuario.validarNombre()).toEqual(true);
-      });
+    });
+    it("Valida password de usuario ingresado sin password", () => {
+        let usuario=new Usuario();
+        expect(usuario.validarPassword()).toEqual(false);
+    });
   }
 );
    
