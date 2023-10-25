@@ -1,4 +1,5 @@
 import { Ejercicio } from "./Ejercicio";
+import { ejerciciosPruebas } from "./constantes";
 class Catalogo{
     constructor(lista=[]){
         this.lista=lista;
@@ -17,14 +18,20 @@ class Catalogo{
     agregarEjercicio(ejercicio){
         this.lista.push(ejercicio);
     }
+
     buscarPorNombre(tituloEjercicio){
         let coincidencias=[];
-      
+
+        if(tituloEjercicio==""){
+            coincidencias= this.lista;
+        }
+        else{
          this.lista.forEach((ejercicio) => {
              if(tituloEjercicio==ejercicio.getTitulo()){
                  coincidencias.push(ejercicio);
              }
            });
+        }
         
         return coincidencias;
     }

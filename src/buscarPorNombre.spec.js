@@ -20,6 +20,10 @@ describe("Buscar ejercicio por nombre", () => {
       let catalogo=new Catalogo(ejerciciosPruebas);
       expect(catalogo.buscarPorNombre("Numeros Random")).toEqual([{"categoria": "","imagen": "1euc7nmD5AGroYcxYYx4DEd-MYAzXuUph","resumen": "","titulo": "Numeros Random"}]);
   });
+    it("Devuelve la lista completa si no se ingresa un nombre para buscar", () => {
+      let catalogo=new Catalogo(ejerciciosPruebas);
+      expect(catalogo.buscarPorNombre("")).toEqual(ejerciciosPruebas);
+  });
   }
 );
 
