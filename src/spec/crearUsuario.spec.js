@@ -1,4 +1,4 @@
-import {Usuario} from "./Usuario";
+import {Usuario} from "../Usuario";
 describe("Crear usuarios version basica", () => {
       it("Devuelve el username del usuario creado", () => {
         let usuario=new Usuario("pepe");

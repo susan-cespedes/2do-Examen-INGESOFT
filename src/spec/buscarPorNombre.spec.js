@@ -1,6 +1,6 @@
-import { Ejercicio } from "./Ejercicio";
-import { Catalogo } from "./Catalogo";
-import { ejerciciosPruebas } from "./constantes";
+import { Ejercicio } from "../Ejercicio";
+import { Catalogo } from "../Catalogo";
+import { ejerciciosPruebas } from "../constantes";
 
 function buscarPorNombre(ejercicios,nombreBuscado){
   let catalogo=new Catalogo(ejercicios);

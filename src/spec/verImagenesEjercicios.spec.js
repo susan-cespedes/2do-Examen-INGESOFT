@@ -1,5 +1,5 @@
-import { Ejercicio } from "./Ejercicio";
-import * as constantes from "./constantes";
+import { Ejercicio } from "../Ejercicio";
+import * as constantes from "../constantes";
 function getImagenEjercicio(titulo,categoria,imagen){
     let ejercicio= new Ejercicio(titulo,categoria,imagen);
     return ejercicio.getImagen();

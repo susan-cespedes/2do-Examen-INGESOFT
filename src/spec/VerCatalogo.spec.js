@@ -1,7 +1,7 @@
-import { Catalogo } from "./Catalogo.js";
-import { ejerciciosPruebas } from "./constantes.js";
-import {Ejercicio} from "./Ejercicio.js";
-// pruebas titulo Ejercicio
+import { Catalogo } from "../Catalogo.js";
+import { ejerciciosPruebas } from "../constantes.js";
+import {Ejercicio} from "../Ejercicio.js";
+
 function getTituloEjercicio(titulo){
   let ejercicio= new Ejercicio(titulo);
   return ejercicio.getTitulo();
@@ -17,7 +17,6 @@ describe("Ver titulo de ejercicio", () => {
 );
 
 
-// pruebas Categoria ejercicio
 function getCategoriaEjercicio(titulo,categoria){
   let ejercicio= new Ejercicio(titulo,categoria);
   return ejercicio.getCategoria();
@@ -32,7 +31,6 @@ describe("Ver categoria de ejercicio", () => {
   }
 );
 
-// pruebas resumen de ejercicio
 function getResumenEjercicio(titulo,categoria,imagen,resumen){
   let ejercicio= new Ejercicio(titulo,categoria,imagen,resumen);
   return ejercicio.getResumen();
@@ -47,7 +45,6 @@ describe("Ver resumen del ejercicio", () => {
   }
 );
 
-//pruebas catalogo ejercicios
 function verificarListaVaciaCatalogo(ejerciciosCatalogo){
   let catalogo= new Catalogo(ejerciciosCatalogo);
   return catalogo.verificarListaVacia();
