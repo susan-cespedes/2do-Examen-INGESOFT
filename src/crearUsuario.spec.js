@@ -1,3 +1,4 @@
+import Usuario from "./Usuario";
 describe("Crear usuarios version basica", () => {
       it("Devuelve el username del usuario creado", () => {
         let usuario=new Usuario("pepe");
@@ -10,11 +11,4 @@ describe("Crear usuarios version basica", () => {
     }
   );
 
-  class Usuario{
-    constructor(nombre) {
-        this.nombre = nombre;
-    }
-        getNombre(){
-            return this.nombre;
-        }
-  };
+   
