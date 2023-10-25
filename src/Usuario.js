@@ -1,5 +1,5 @@
 class Usuario{
-    constructor(nombre, password) {
+    constructor(nombre="", password) {
         this.nombre = nombre;
         this.password = password;
     }
@@ -10,7 +10,10 @@ class Usuario{
             return this.password;
         }
         validarNombre(){
-            return false;
+            if(this.nombre == "")
+                return false;
+            else
+                return true;
         }
   };
 

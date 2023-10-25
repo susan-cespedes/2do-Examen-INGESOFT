@@ -19,10 +19,14 @@ describe("Crear usuarios version basica", () => {
     }
   );
   describe("Validar Campos Usuario", () => {
-    it("Valida nombre de usuario ingresado", () => {
+    it("Valida nombre de usuario ingresado sin nombre", () => {
       let usuario=new Usuario();
       expect(usuario.validarNombre()).toEqual(false);
     });
+    it("Valida nombre de usuario ingresado con nombre", () => {
+        let usuario=new Usuario("pepe");
+        expect(usuario.validarNombre()).toEqual(true);
+      });
   }
 );
    
