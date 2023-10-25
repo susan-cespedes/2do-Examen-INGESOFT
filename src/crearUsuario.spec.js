@@ -12,6 +12,10 @@ describe("Crear usuarios version basica", () => {
         let usuario=new Usuario("pepe","12pepeqw");
         expect(usuario.getPassword()).toEqual("12pepeqw");
       });
+      it("Devuelve el password del usuario creado pepe", () => {
+        let usuario=new Usuario("pepe","perroSalchichaGordoBachicha");
+        expect(usuario.getPassword()).toEqual("perroSalchichaGordoBachicha");
+      });
     }
   );
 

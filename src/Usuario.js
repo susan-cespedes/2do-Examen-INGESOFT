@@ -1,12 +1,13 @@
 class Usuario{
-    constructor(nombre) {
+    constructor(nombre, password) {
         this.nombre = nombre;
+        this.password = password;
     }
         getNombre(){
             return this.nombre;
         }
         getPassword(){
-            return "12pepeqw";
+            return this.password;
         }
   };
 
