@@ -9,6 +9,9 @@ class Usuario{
         getPassword(){
             return this.password;
         }
+        validarNombre(){
+            return false;
+        }
   };
 
 export default Usuario;

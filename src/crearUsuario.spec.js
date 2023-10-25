@@ -18,5 +18,11 @@ describe("Crear usuarios version basica", () => {
       });
     }
   );
-
+  describe("Validar Campos Usuario", () => {
+    it("Valida nombre de usuario ingresado", () => {
+      let usuario=new Usuario();
+      expect(usuario.validarNombre()).toEqual(false);
+    });
+  }
+);
    
