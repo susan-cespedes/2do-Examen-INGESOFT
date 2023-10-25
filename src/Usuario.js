@@ -13,8 +13,11 @@ class Usuario{
             return this.nombre!="";
         }
         validarPassword(){
-            return this.password != "";
+            return this.password!="";
+        }
+        validarCampos(){
+            return false;
         }
   };
+  export{Usuario};
 
-export default Usuario;

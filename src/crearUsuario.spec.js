@@ -1,4 +1,4 @@
-import Usuario from "./Usuario";
+import {Usuario} from "./Usuario";
 describe("Crear usuarios version basica", () => {
       it("Devuelve el username del usuario creado", () => {
         let usuario=new Usuario("pepe");
@@ -35,6 +35,10 @@ describe("Crear usuarios version basica", () => {
         let usuario=new Usuario("pepe","12pepeqw");
         expect(usuario.validarPassword()).toEqual(true);
     });
+    it("Valida todos los campos del usuario", () => {
+      let usuario=new Usuario();
+      expect(usuario.validarCampos()).toEqual(false);
+  });
   }
 );
    
