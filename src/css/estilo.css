@@ -41,22 +41,22 @@ h2{
 #menulateral ul li a{
     color: #B04221;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 18px;
     text-decoration: none;  
-    text-transform: uppercase;
-    border-bottom: 1px dashed #B04221;
-    
-    
+    text-transform: uppercase;  
 }
 #menulateral ul li a:hover{
     color: #8b8635;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     text-decoration: none;  
-    text-transform: uppercase;
+    text-transform: uppercase;    
+}
+ul li{
     border-bottom: 1px dashed #B04221;
-    
-    
+}
+li{
+    padding: 5px 0px;
 }
 
 #menulateral{
@@ -135,7 +135,7 @@ footer{
   color: white;
 }
 
-input[type=text],select, textarea{
+input[type=text],input[type=search],select, textarea{
     width: 100%;
     padding: 10px 0px;
     display: inline-block;

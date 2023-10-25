@@ -7,6 +7,7 @@ const catalogo = new Catalogo(ejercicios);
 const txtNombre = document.getElementById("txtNombre");
 const selecCategoria = document.getElementById("selecCategoria");
 const txtDetalle = document.getElementById("txtDetalle");
+const txtBuscarNombreEjer=document.getElementById("txtbuscar");
 
 function crearHTMLejercicios(listaEjercicios, contenedor) {
   contenedor.innerHTML = "";
@@ -51,4 +52,13 @@ function crearjercicio() {
     alert("Todos los campos son obligatorios");
   }
 }
-export { llenarEjercicios, crearjercicio };
+
+function buscarEjercicioPorNombre(){
+    let nombreBuscado=txtBuscarNombreEjer.value;
+    let listaCoincidencias=catalogo.buscarPorNombre(nombreBuscado);
+    console.log(listaCoincidencias);
+    console.log(detalleCatalogo);
+    // detalleCatalogo.style.display='block';
+    crearHTMLejercicios(listaCoincidencias,detalleCatalogo);
+}
+export { llenarEjercicios, crearjercicio, buscarEjercicioPorNombre};
