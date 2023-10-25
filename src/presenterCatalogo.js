@@ -1,7 +1,7 @@
 import { Catalogo } from "./Catalogo.js";
 import { Ejercicio } from "./Ejercicio.js";
 import { ejercicios } from "./dataCatalogo.js";
-import { URLIMAGENES } from "./constantes.js";
+import { URLIMAGENES,CERO } from "./constantes.js";
 const detalleCatalogo = document.getElementById("detallecatalogo");
 const catalogo = new Catalogo(ejercicios);
 const txtNombre = document.getElementById("txtNombre");
@@ -39,26 +39,32 @@ function llenarEjercicios() {
   }
   crearHTMLejercicios(catalogo.getEjercicios(), detalleCatalogo);
 }
-
+function mostrarMensajeDeAlerta(mensaje){
+  alert(mensaje);
+}
 function crearjercicio() {
   const nombre = txtNombre.value;
   const categoria = selecCategoria.value;
   const detalle = txtDetalle.value;
   let ejercicio = new Ejercicio(nombre, categoria, undefined, detalle);
   if (ejercicio.validarAtributos() == true) {
-    alert("Datos subidos correctamente");
+    mostrarMensajeDeAlerta("Datos subidos correctamente");
     catalogo.agregarEjercicio(ejercicio);
   } else {
-    alert("Todos los campos son obligatorios");
+    mostrarMensajeDeAlerta("Todos los campos son obligatorios");
   }
 }
 
 function buscarEjercicioPorNombre(){
     let nombreBuscado=txtBuscarNombreEjer.value;
     let listaCoincidencias=catalogo.buscarPorNombre(nombreBuscado);
-    console.log(listaCoincidencias);
-    console.log(detalleCatalogo);
-    // detalleCatalogo.style.display='block';
-    crearHTMLejercicios(listaCoincidencias,detalleCatalogo);
+    console.log(listaCoincidencias)
+    console.log(nombreBuscado)
+    if(listaCoincidencias.length==CERO){
+        mostrarMensajeDeAlerta("No se encontro el/los ejercicios");
+        detalleCatalogo.innerHTML="";
+    }
+    else
+      crearHTMLejercicios(listaCoincidencias,detalleCatalogo);
 }
 export { llenarEjercicios, crearjercicio, buscarEjercicioPorNombre};

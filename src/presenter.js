@@ -46,7 +46,6 @@ txtbuscar.addEventListener("keypress",(env)=>{
   if(env.key=="Enter"){
     env.preventDefault();
     contenidocatalogo.style.display = "block";
-    
     buscarEjercicioPorNombre();
   }
   
